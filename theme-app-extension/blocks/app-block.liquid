@@ -1,0 +1,28 @@
+<div id="calendar_title">{{ block.settings.title }}</div>
+<div id="cal_date">{{ block.settings.cal_date }}</div>
+<script defer src="{{ 'calendar.js' | asset_url }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ 'calendar.css' | asset_url }}">
+<div id="calendar"></div>
+<!-- <button id="prev" type="button">次の月</button>
+<button id="next" type="button">次の月</button> -->
+
+{% schema %}
+  {
+    "name": "calendar",
+    "target": "section",
+    "class": "calendar",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "タイトル",
+        "default": "営業日カレンダー"
+      },
+      {
+        "type": "textarea",
+        "id": "cal_date",
+        "label": "営業日を入れてください"
+      }
+    ]
+  }
+{% endschema %}
