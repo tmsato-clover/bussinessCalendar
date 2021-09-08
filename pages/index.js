@@ -17,8 +17,8 @@ const getCalendarArray = (date) => {
 };
 
 function App() {
-  // const [targetDate, setTargetDate] = useState(new Date())  // 変更
-  // const calendar = getCalendarArray(targetDate)
+  const [targetDate, setTargetDate] = useState(new Date()); // 変更
+  const calendar = getCalendarArray(targetDate);
 
   return <div> テーマ編集画面でカレンダーの設定を行ってください </div>;
 }
